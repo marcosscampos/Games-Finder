@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Games Finder</string>
+    <string name="game_finder">Games Finder</string>
+    <string name="game_s_image" translatable="false">Imagem do jogo</string>
+    <string name="overview">Visões Gerais</string>
+    <string name="release_date">Data de Lançamento</string>
+    <string name="game_title">Título</string>
+    <string name="game_release_date">Data de Lançamento do jogo</string>
+    <string name="game_details">Detalhes do jogo</string>
+    <string name="game_details_info_overview">Visões gerais do jogo</string>
+    <string name="searchGameshint">Buscar Jogo</string>
+    <string name="search_games">Buscar Jogos</string>
+    <string name="previous">Anterior</string>
+    <string name="next">Próximo</string>
+    <string name="title_activity_login">Activity de Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha</string>
+    <string name="email">Email</string>
+    <string name="login">Conectar</string>
+    <string name="sign_up">Cadastre-se</string>
+    <string name="password">Senha</string>
+    <string name="logo_login">Logo do login</string>
+    <string name="name">Nome</string>
+    <string name="confirm_password">Confirmar Senha</string>
+    <string name="finish">Finalizar</string>
+    <string name="user">Usuário</string>
+    <string name="logged_user">Usuário Logado</string>
+    <string name="error_on_show">Erro ao retornar o nome do usuário logado.</string>
+</resources>

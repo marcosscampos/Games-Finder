@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.GameDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/gameImageDetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/game_details_image_height"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/game_s_image"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_spacing"
+            android:layout_marginTop="@dimen/default_spacing"
+            android:layout_marginEnd="@dimen/default_spacing"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gameImageDetail"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/detailsGame"
+                style="@style/GameTitleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+
+            <com.like.LikeButton
+                android:id="@+id/addFavoriteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                app:icon_size="16dp"
+                app:icon_type="heart" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/label_background_release"
+            android:id="@+id/releaseDateGame"
+            android:layout_marginTop="@dimen/small_spacing"
+            android:paddingStart="@dimen/small_spacing"
+            android:paddingTop="@dimen/tiny_spacing"
+            android:paddingEnd="@dimen/small_spacing"
+            android:paddingBottom="@dimen/tiny_spacing"
+            android:text="@string/game_release_date"
+            app:layout_constraintStart_toStartOf="@id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout"
+            />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_marginTop="@dimen/default_spacing"
+            app:layout_constraintStart_toStartOf="@id/releaseDateGame"
+            app:layout_constraintTop_toBottomOf="@id/releaseDateGame" />
+
+        <TextView
+            android:id="@+id/gameDetailsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_spacing"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/releaseDateGame"
+            app:layout_constraintTop_toTopOf="@+id/separator"/>
+
+        <LinearLayout
+            android:id="@+id/GameDetailsRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_spacing"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:text="@string/game_details"
+            app:layout_constraintEnd_toEndOf="@+id/gameDetailsText"
+            app:layout_constraintStart_toStartOf="@+id/gameDetailsText"
+            app:layout_constraintTop_toBottomOf="@+id/gameDetailsText">
+
+            <TextView
+                android:id="@+id/GameDetailsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/InfoLabelText"
+                android:textAllCaps="true"
+                android:layout_marginEnd="@dimen/small_spacing"
+                android:text="@string/game_details_info_overview"
+                app:layout_constraintEnd_toEndOf="@+id/gameDetailsText"
+                app:layout_constraintStart_toStartOf="@+id/gameDetailsText"
+                app:layout_constraintTop_toBottomOf="@+id/gameDetailsText"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RatingBar"
+                android:isIndicator="true"
+                android:layout_marginTop="5dp"
+                style="?android:attr/ratingBarStyleSmall"
+                android:progressTint="@color/maize"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

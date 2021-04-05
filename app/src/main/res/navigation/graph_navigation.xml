@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/graph_navigation"
+    app:startDestination="@id/nameFragment">
+
+    <fragment
+        android:id="@+id/nameFragment"
+        android:name="br.edu.infnet.gamesfinder.view.fragments.NameFragment"
+        android:label="nameFragment">
+        <action
+            android:id="@+id/action_nameFragmentTo_EmailFragment"
+            app:destination="@id/emailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="br.edu.infnet.gamesfinder.view.fragments.EmailFragment"
+        android:label="EmailFragment">
+        <action
+            android:id="@+id/action_emailFragmentTo_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="br.edu.infnet.gamesfinder.view.fragments.PasswordFragment"
+        android:label="passwordFragment"/>
+
+</navigation>

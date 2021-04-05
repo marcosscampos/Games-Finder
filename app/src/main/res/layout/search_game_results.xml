@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameSearchCard"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_marginStart="@dimen/default_spacing"
+    android:layout_marginEnd="@dimen/default_spacing"
+    android:layout_marginBottom="@dimen/default_spacing"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="@dimen/small_spacing"
+    app:cardCornerRadius="@dimen/cardCornerRadius"
+    app:cardBackgroundColor="@color/whiteFull"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_spacing">
+
+        <ImageView
+            android:id="@+id/gameImage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/default_spacing"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="@string/game_s_image"
+            android:scaleType="centerCrop" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:id="@+id/searchGameLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/gameSearchTitle"
+                    style="@style/GameTitleCompact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/default_spacing"
+                    android:layout_weight="1"
+                    android:text="@string/game_title" />
+
+                <TextView
+                    android:id="@+id/gameSearchDate"
+                    style="@style/ReleaseYearText"
+                    android:background="@drawable/label_background_release"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/small_spacing"
+                    android:paddingTop="@dimen/tiny_spacing"
+                    android:paddingEnd="@dimen/small_spacing"
+                    android:paddingBottom="@dimen/tiny_spacing"
+                    android:text="@string/release_date" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/GameSearchOverview"
+                style="@style/ParagraphText"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/default_spacing"
+                android:text="@string/overview"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/searchGameLinearLayout"
+                app:layout_constraintStart_toStartOf="@id/searchGameLinearLayout"
+                app:layout_constraintTop_toBottomOf="@id/searchGameLinearLayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

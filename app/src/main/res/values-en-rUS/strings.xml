@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Games Finder</string>
+    <string name="game_finder" translatable="false">Game Finder</string>
+    <string name="game_s_image" translatable="false">Game\'s image</string>
+    <string name="overview" translatable="false">Overview</string>
+    <string name="release_date" translatable="false">Release Date</string>
+    <string name="game_title" translatable="false">Game Title</string>
+    <string name="game_release_date" translatable="false">Game Release Date</string>
+    <string name="game_details" translatable="false">Game Details</string>
+    <string name="game_details_info_overview" translatable="false">Game Overview</string>
+    <string name="searchGameshint" translatable="false">Search Games Hint</string>
+    <string name="search_games" translatable="false">Search Games</string>
+    <string name="previous" translatable="false">Previous</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="title_activity_login" translatable="false">Login\'s Activity</string>
+    <string name="prompt_email" translatable="false">Email</string>
+    <string name="prompt_password" translatable="false">Password</string>
+    <string name="error_on_show">Error on show to logged name.</string>
+    <string name="logged_user">Logged User:</string>
+    <string name="user">User</string>
+    <string name="finish">Finish</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="password">Password</string>
+    <string name="logo_login">Login Logo</string>
+</resources>
