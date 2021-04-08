@@ -4,21 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.fragments.UserFragment">
+        <TextView
+            android:id="@+id/txtUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/welcome_user" />
 
-    <TextView
-        android:id="@+id/txtUser"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/logged_user"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        />
-    <TextView
-        android:id="@+id/txtLoggedUser"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/user" />
-
+        <TextView
+            android:id="@+id/txtLoggedUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/user" />
 </FrameLayout>

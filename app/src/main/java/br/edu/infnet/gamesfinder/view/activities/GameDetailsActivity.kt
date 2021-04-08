@@ -73,4 +73,9 @@ class GameDetailsActivity : AppCompatActivity() {
     private fun addToFavorite(id: Int) = AddToFavoriteService(this).execute(id)
 
     private fun removeFromFavorite(id: Int) = RemoveFromFavoriteService(this).execute(id)
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
 }

@@ -4,12 +4,14 @@ import android.app.SearchManager
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.Menu
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.SearchView
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.infnet.gamesfinder.R
@@ -18,6 +20,7 @@ import br.edu.infnet.gamesfinder.model.GamesResult
 import br.edu.infnet.gamesfinder.service.GameFinderService
 import br.edu.infnet.gamesfinder.service.util.GetAllFavoritesService
 import br.edu.infnet.gamesfinder.view.fragments.UserFragment
+import br.edu.infnet.gamesfinder.viewModel.UserViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -35,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         progress.visibility = View.VISIBLE
 
         val call = GameFinderService.service.getAllGames()
-        getLoggerUser(UserFragment())
 
         call.enqueue(object : Callback<GamesResult> {
             override fun onResponse(call: Call<GamesResult>, response: Response<GamesResult>) {
@@ -64,16 +66,5 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onCreateOptionsMenu(menu)
-    }
-
-    private fun getLoggerUser(user: UserFragment) {
-        val bundle = Bundle()
-        val name = intent.getStringExtra("name")
-        bundle.putString("name", name)
-
-        user.setArguments(bundle)
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.frameLayout, user)
-            .commit()
     }
 }

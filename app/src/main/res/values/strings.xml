@@ -32,5 +32,6 @@
     <string name="finish">Finish</string>
     <string name="user">User</string>
     <string name="logged_user">Logged User:</string>
-    <string name="error_on_show">Error on show the logged name.</string>
+    <string name="error_on_show">Error on show the username.</string>
+    <string name="welcome_user">Welcome</string>
 </resources>
