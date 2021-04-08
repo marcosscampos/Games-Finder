@@ -28,4 +28,6 @@
     <string name="password">Password</string>
     <string name="logo_login">Login Logo</string>
     <string name="welcome_user">Welcome</string>
+    <string name="invalid_password">Invalid Password</string>
+    <string name="logout">Logout</string>
 </resources>

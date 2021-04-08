@@ -28,4 +28,6 @@
     <string name="logged_user">Usuário Logado</string>
     <string name="error_on_show">Erro ao retornar o nome do usuário.</string>
     <string name="welcome_user">Bem-Vindo</string>
+    <string name="invalid_password">Senha inválida</string>
+    <string name="logout">Sair</string>
 </resources>

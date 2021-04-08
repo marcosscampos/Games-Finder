@@ -30,5 +30,12 @@
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="1"
             tools:listitem="@layout/games_card" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:id="@+id/btnSair"
+            android:background="@color/purple_200"
+            android:layout_below="@id/recycler_view_main"/>
     </RelativeLayout>
 </ScrollView>

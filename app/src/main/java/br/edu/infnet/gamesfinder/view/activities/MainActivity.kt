@@ -2,12 +2,13 @@ package br.edu.infnet.gamesfinder.view.activities
 
 import android.app.SearchManager
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.view.Menu
 import android.view.View
+import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.SearchView
 import android.widget.Toast
@@ -19,8 +20,9 @@ import br.edu.infnet.gamesfinder.adapter.GetAllGamesAdapter
 import br.edu.infnet.gamesfinder.model.GamesResult
 import br.edu.infnet.gamesfinder.service.GameFinderService
 import br.edu.infnet.gamesfinder.service.util.GetAllFavoritesService
-import br.edu.infnet.gamesfinder.view.fragments.UserFragment
+import br.edu.infnet.gamesfinder.viewModel.LoginViewModel
 import br.edu.infnet.gamesfinder.viewModel.UserViewModel
+import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -33,11 +35,28 @@ class MainActivity : AppCompatActivity() {
 
         val progress = findViewById<ProgressBar>(R.id.progressBar)
 
+        val name = intent.getStringExtra("name")
+
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view_main)
 
         progress.visibility = View.VISIBLE
 
         val call = GameFinderService.service.getAllGames()
+
+        if (!name.isNullOrBlank()) {
+            Snackbar.make(
+                this@MainActivity,
+                recyclerView,
+                getString(R.string.welcome_user) + name,
+                Snackbar.LENGTH_LONG
+            ).show()
+        }
+
+        val btnSair = findViewById<Button>(R.id.btnSair)
+        btnSair.setOnClickListener {
+            val login = Intent(this, LoginActivity::class.java)
+            startActivity(login)
+        }
 
         call.enqueue(object : Callback<GamesResult> {
             override fun onResponse(call: Call<GamesResult>, response: Response<GamesResult>) {
