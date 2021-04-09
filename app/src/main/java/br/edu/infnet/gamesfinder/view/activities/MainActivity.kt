@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(
                 this@MainActivity,
                 recyclerView,
-                getString(R.string.welcome_user) + name,
+                getString(R.string.welcome_user) + " " + name,
                 Snackbar.LENGTH_LONG
             ).show()
         }
